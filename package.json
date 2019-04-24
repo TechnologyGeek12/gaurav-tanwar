@@ -1,7 +1,7 @@
 {
-  "name": "demo-pages",
+  "name": "gaurav-tanwar",
   "version": "0.1.0",
-  "homepage": "https://technologygeek12.github.io/demo-pages/",
+  "homepage": "https://technologygeek12.github.io/gaurav-tanwar/",
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "gh-pages": "^2.0.1",
