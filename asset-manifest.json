@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/demo-pages/static/css/main.5bc91855.chunk.css",
-    "main.js": "/demo-pages/static/js/main.d007700f.chunk.js",
-    "main.js.map": "/demo-pages/static/js/main.d007700f.chunk.js.map",
-    "runtime~main.js": "/demo-pages/static/js/runtime~main.455ac7fc.js",
-    "runtime~main.js.map": "/demo-pages/static/js/runtime~main.455ac7fc.js.map",
-    "static/js/2.b7a096be.chunk.js": "/demo-pages/static/js/2.b7a096be.chunk.js",
-    "static/js/2.b7a096be.chunk.js.map": "/demo-pages/static/js/2.b7a096be.chunk.js.map",
-    "index.html": "/demo-pages/index.html",
-    "precache-manifest.bd2eb0b912bd676405c40404be9a1077.js": "/demo-pages/precache-manifest.bd2eb0b912bd676405c40404be9a1077.js",
-    "service-worker.js": "/demo-pages/service-worker.js",
-    "static/css/main.5bc91855.chunk.css.map": "/demo-pages/static/css/main.5bc91855.chunk.css.map"
+    "main.css": "/gaurav-tanwar/static/css/main.5bc91855.chunk.css",
+    "main.js": "/gaurav-tanwar/static/js/main.5a457d5d.chunk.js",
+    "main.js.map": "/gaurav-tanwar/static/js/main.5a457d5d.chunk.js.map",
+    "runtime~main.js": "/gaurav-tanwar/static/js/runtime~main.25319802.js",
+    "runtime~main.js.map": "/gaurav-tanwar/static/js/runtime~main.25319802.js.map",
+    "static/js/2.b7a096be.chunk.js": "/gaurav-tanwar/static/js/2.b7a096be.chunk.js",
+    "static/js/2.b7a096be.chunk.js.map": "/gaurav-tanwar/static/js/2.b7a096be.chunk.js.map",
+    "index.html": "/gaurav-tanwar/index.html",
+    "precache-manifest.61b0d7f8821f0d3430476c6a3824b1cd.js": "/gaurav-tanwar/precache-manifest.61b0d7f8821f0d3430476c6a3824b1cd.js",
+    "service-worker.js": "/gaurav-tanwar/service-worker.js",
+    "static/css/main.5bc91855.chunk.css.map": "/gaurav-tanwar/static/css/main.5bc91855.chunk.css.map"
   }
 }
