@@ -85,8 +85,9 @@ p.lead {
 
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 800;
+  font-size: 14px;
   letter-spacing: 0.05rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 #sideNav .navbar-toggler:focus {
@@ -119,7 +120,7 @@ p.lead {
   #sideNav .navbar-brand .img-profile {
     max-width: 10rem;
     max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    border: 0.5rem solid rgba(255, 255, 255, 0.5);
   }
   #sideNav .navbar-collapse {
     display: -webkit-box;
