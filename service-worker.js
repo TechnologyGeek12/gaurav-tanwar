@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 importScripts(
-  "/gaurav-tanwar/precache-manifest.61b0d7f8821f0d3430476c6a3824b1cd.js"
+  "/gaurav-tanwar/precache-manifest.8a719ba1afb9e4a494454d14422ddf48.js"
 );
 
 self.addEventListener('message', (event) => {

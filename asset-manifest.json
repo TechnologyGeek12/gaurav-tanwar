@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gaurav-tanwar/static/css/main.5bc91855.chunk.css",
-    "main.js": "/gaurav-tanwar/static/js/main.5a457d5d.chunk.js",
-    "main.js.map": "/gaurav-tanwar/static/js/main.5a457d5d.chunk.js.map",
+    "main.css": "/gaurav-tanwar/static/css/main.0ec5893a.chunk.css",
+    "main.js": "/gaurav-tanwar/static/js/main.c35f1d52.chunk.js",
+    "main.js.map": "/gaurav-tanwar/static/js/main.c35f1d52.chunk.js.map",
     "runtime~main.js": "/gaurav-tanwar/static/js/runtime~main.25319802.js",
     "runtime~main.js.map": "/gaurav-tanwar/static/js/runtime~main.25319802.js.map",
     "static/js/2.b7a096be.chunk.js": "/gaurav-tanwar/static/js/2.b7a096be.chunk.js",
     "static/js/2.b7a096be.chunk.js.map": "/gaurav-tanwar/static/js/2.b7a096be.chunk.js.map",
     "index.html": "/gaurav-tanwar/index.html",
-    "precache-manifest.61b0d7f8821f0d3430476c6a3824b1cd.js": "/gaurav-tanwar/precache-manifest.61b0d7f8821f0d3430476c6a3824b1cd.js",
+    "precache-manifest.8a719ba1afb9e4a494454d14422ddf48.js": "/gaurav-tanwar/precache-manifest.8a719ba1afb9e4a494454d14422ddf48.js",
     "service-worker.js": "/gaurav-tanwar/service-worker.js",
-    "static/css/main.5bc91855.chunk.css.map": "/gaurav-tanwar/static/css/main.5bc91855.chunk.css.map"
+    "static/css/main.0ec5893a.chunk.css.map": "/gaurav-tanwar/static/css/main.0ec5893a.chunk.css.map"
   }
 }
