@@ -4,10 +4,15 @@
   "homepage": "https://technologygeek12.github.io/gaurav-tanwar/",
   "dependencies": {
     "@material-ui/core": "^3.9.3",
+    "dynamic-qr-code-generator": "0.0.2",
     "gh-pages": "^2.0.1",
+    "number-finder": "^1.0.9",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-draggable-menu": "0.0.3",
     "react-geolocation-autosuggest": "^0.1.1",
+    "react-icons": "^3.6.1",
+    "react-region-flag-select": "0.0.8",
     "react-scripts": "3.0.0"
   },
   "scripts": {

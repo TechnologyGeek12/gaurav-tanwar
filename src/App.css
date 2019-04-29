@@ -191,4 +191,7 @@ a {
 a:hover, a:focus, a:active {
   color: #ff5722;
 }
+.item{
+  z-index: 2000;
+}
 

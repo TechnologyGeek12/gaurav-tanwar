@@ -1,11 +1,13 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import Demo from './Demo';
+import './App.css';
 
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isMore: false
+            isMore: false,
+            clickModule: false
         }
 
     }
@@ -14,6 +16,10 @@ export default class Home extends React.Component {
 
     clickMore = () => {
         this.setState({ isMore: !this.state.isMore });
+    }
+
+    clickModule = (value) => {
+        this.setState({ clickModule: value });
     }
 
 
@@ -54,38 +60,38 @@ export default class Home extends React.Component {
                                 <li className="nav-item">
                                     <a className="nav-link js-scroll-trigger" href="#awards">Awards</a>
                                 </li></span>}
-                            <li className="nav-item" onClick={() => this.clickMore()} style={{cursor:'pointer'}}>
+                            <li className="nav-item" onClick={() => this.clickMore()} style={{ cursor: 'pointer' }}>
                                 <a className="nav-link js-scroll-trigger">{this.state.isMore ? 'Less...' : 'More...'}</a>
                             </li>
-                            <hr className="m-0" color='#fff'/>
-                            <span style={{color:'#e64a19',fontSize:'2em',fontWeight:600}}>Demo Links</span>
-                            <span style={{color:'#e64a19',fontSize:'1.2em',fontWeight:600}}>JS Packages</span>
-                            <li className="nav-item">
-                                    <a className="nav-link js-scroll-trigger" href="#qrCode" title="dynamic-qr-code-generator">qr-code-generator</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link js-scroll-trigger" href="#numberFinder" title="number-finder">number-finder</a>
-                                </li>
-                                <span style={{color:'#e64a19',fontSize:'1.2em',fontWeight:600}}>React Packages</span>
-                                <li className="nav-item">
-                                    <a className="nav-link js-scroll-trigger" href="#draggableMenu" title="react-draggable-menu">draggable-menu</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link js-scroll-trigger" href="#resizableModal" title="react-draggable-resizable-modal">draggable-resizable-modal</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link js-scroll-trigger" href="https://technologygeek12.github.io/react-geolocation-autosuggest/" title="react-geolocation-autosuggest">geolocation-autosuggest</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link js-scroll-trigger" href="#flagSelect" title="react-region-flag-select">region-flag-select</a>
-                                </li>
+                            <hr className="m-0" color='#fff' />
+                            <span style={{ color: '#e64a19', fontSize: '2em', fontWeight: 600 }}>Demo Links</span>
+                            <span style={{ color: '#e64a19', fontSize: '1.2em', fontWeight: 600 }}>JS Packages</span>
+                            <li className="nav-item" onClick={() => this.clickModule('qrCode')}>
+                                <a className="nav-link js-scroll-trigger" href="#qrCode" title="dynamic-qr-code-generator">qr-code-generator</a>
+                            </li>
+                            <li className="nav-item" onClick={() => this.clickModule('numberFinder')}>
+                                <a className="nav-link js-scroll-trigger" href="#numberFinder" title="number-finder">number-finder</a>
+                            </li>
+                            <span style={{ color: '#e64a19', fontSize: '1.2em', fontWeight: 600 }}>React Packages</span>
+                            <li className="nav-item" onClick={() => this.clickModule('draggableMenu')}>
+                                <a className="nav-link js-scroll-trigger" href="#draggableMenuDemo" title="react-draggable-menu">draggable-menu</a>
+                            </li>
+                            <li className="nav-item" onClick={() => this.clickModule('resizableModal')}>
+                                <a className="nav-link js-scroll-trigger" href="#resizableModal" title="react-draggable-resizable-modal">draggable-resizable-modal</a>
+                            </li>
+                            <li className="nav-item" onClick={() => this.clickModule('autoSuggest')}>
+                                <a className="nav-link js-scroll-trigger" href="https://technologygeek12.github.io/react-geolocation-autosuggest/" title="react-geolocation-autosuggest">geolocation-autosuggest</a>
+                            </li>
+                            <li className="nav-item" onClick={() => this.clickModule('flagSelect')}>
+                                <a className="nav-link js-scroll-trigger" href="#flagSelect" title="react-region-flag-select">region-flag-select</a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
 
                 <div className="container-fluid p-0" >
 
-                    <section className="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+                    {this.state.clickModule!=='draggableMenu' && <section className="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
                         <div className="w-100">
                             <h1 className="mb-0">Gaurav
           <span className="text-primary">Tanwar</span>
@@ -96,7 +102,7 @@ export default class Home extends React.Component {
                             <p className="lead mb-5">I am experienced in leveraging agile frameworks to share and work with my expertise in React,Redux,Redux-saga,React-native and different important tools required in development.
                             Working as a Lead React developer with very good knowledge of react and its related technologies.
                             Having a very good knowledge of Git,NPM, Jira, Slack and many more tools, and like to create different NPM Packages in my free time to grow and share my knowledge.</p>
-                            
+
                             <div className="social-icons">
                                 <a href="https://www.linkedin.com/in/gaurav-tanwar-337484118/">
                                     <i className="fab fa-linkedin-in"></i>
@@ -115,7 +121,7 @@ export default class Home extends React.Component {
                                 </a>
                             </div>
                         </div>
-                    </section>
+                    </section>}
 
                     <hr className="m-0" />
                     {this.state.isMore && <span>
@@ -127,7 +133,7 @@ export default class Home extends React.Component {
                                     <div className="resume-content">
                                         <h3 className="mb-0">Lead React Developer</h3>
                                         <div className="subheading mb-3">RevInfotech Pvt Ltd</div>
-                                        {/* <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p> */}
+                                        <p>A software development company which provide services to its different clients from various countries. Develope webapps,mobile applications,android applications,IOS applications,blockchain,cryptocurrency etc.</p>
                                     </div>
                                     <div className="resume-date text-md-right">
                                         <span className="text-primary">Jan 2019 - Present</span>
@@ -138,7 +144,7 @@ export default class Home extends React.Component {
                                     <div className="resume-content">
                                         <h3 className="mb-0">React/Senior React - Developer</h3>
                                         <div className="subheading mb-3">Bluepi Pvt Ltd</div>
-                                        {/* <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p> */}
+                                        <p>A software development company which provide services and its own product as well . develope webapps,mobile applications,android applications,IOS applications and cloud computing etc.</p>
                                     </div>
                                     <div className="resume-date text-md-right">
                                         <span className="text-primary">Sep 2017 - Dec 2018</span>
@@ -149,7 +155,7 @@ export default class Home extends React.Component {
                                     <div className="resume-content">
                                         <h3 className="mb-0">Software Developer</h3>
                                         <div className="subheading mb-3">Pronto It Labs</div>
-                                        {/* <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p> */}
+                                        <p>A software development company, Webapps, Websites, mobile sites, mobile apps, web applications, mobile applications, android development, and iPhone development.</p>
                                     </div>
                                     <div className="resume-date text-md-right">
                                         <span className="text-primary">Jan 2017 - Aug 2017</span>
@@ -539,6 +545,33 @@ Research and Advanced Studies. - GGSIP University</li>
                             </div>
                         </section></span>}
 
+                    <hr className="m-0" />
+
+                    {this.state.clickModule && this.state.clickModule == 'qrCode' &&
+                        <section className="p-3 p-lg-5 d-flex align-items-center" id="qrCode">
+                            <Demo type={this.state.clickModule} />
+                        </section>
+                    }
+
+                    {this.state.clickModule && this.state.clickModule == 'numberFinder' &&
+                        <section className="p-3 p-lg-5 d-flex align-items-center" id="numberFinder">
+                            <Demo type={this.state.clickModule} />
+                        </section>}
+
+                    {this.state.clickModule && this.state.clickModule == 'draggableMenu' &&
+                        <section className="p-3 p-lg-5 d-flex align-items-center" id="draggableMenuDemo">
+                            <Demo type={this.state.clickModule} />
+                        </section>}
+
+                    {this.state.clickModule && this.state.clickModule == 'resizableModal' &&
+                        <section className="p-3 p-lg-5 d-flex align-items-center" id="resizableModal">
+                            <Demo type={this.state.clickModule} />
+                        </section>}
+
+                    {this.state.clickModule && this.state.clickModule == 'flagSelect' &&
+                        <section className="p-3 p-lg-5 d-flex align-items-center" id="flagSelect">
+                            <Demo type={this.state.clickModule} />
+                        </section>}
                 </div>
             </div>
         );
