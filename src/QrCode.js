@@ -12,10 +12,10 @@ class QrCode extends Component {
             checkboxStates: {
                 backgroundColor: '#fff',
                 foregroundColor: '#000',
-                width: '256',
-                height: '256',
+                width: '100',
+                height: '100',
                 isLogo: false,
-                logoSize: '80',
+                logoSize: '30',
                 customLogoDesign: false,
                 value: 'https://github.com/TechnologyGeek12/qr-code-generator'
             },

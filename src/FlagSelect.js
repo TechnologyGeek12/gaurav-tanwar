@@ -77,7 +77,7 @@ class FlagSelect extends Component {
                     <b> React Region Flag Select</b>
                 </div>
                 <div>
-                    <div style={{ width: '35%', float: 'left' }}>
+                    <div style={{ width: '40%', float: 'left' }}>
                         <RegionSelect
                             isFlag={that.state.checkboxStates.isFlag}
                             isPhoneCode={that.state.checkboxStates.isPhoneCode}
@@ -115,7 +115,7 @@ class FlagSelect extends Component {
                         })}
 
                     </div>
-                    <div style={{ width: '20%', float: 'left' }}>
+                    <div style={{ width: '15%', float: 'left' }}>
                         {keysData.map(function (data, index) {
                             if (typeof that.state.checkboxStates[data] === 'string' || Array.isArray(that.state.checkboxStates[data]) || typeof that.state.checkboxStates[data] === "number") {
                                 if (data !== 'key') {
