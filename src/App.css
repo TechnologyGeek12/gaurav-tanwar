@@ -194,4 +194,10 @@ a:hover, a:focus, a:active {
 .item{
   z-index: 2000;
 }
+.close-icon{
+  padding-top: 2px;
+}
 
+.fas.fa-times {
+  color: black;
+}

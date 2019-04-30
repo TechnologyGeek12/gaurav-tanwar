@@ -4,11 +4,12 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { QRGenerator } from 'dynamic-qr-code-generator';
 
 import RegionSelect from 'react-region-flag-select';
-// import ReactDynamicModal from 'react-draggable-resizable-modal';
+import ReactDynamicModal from 'react-draggable-resizable-modal';
 import QrCode from './QrCode';
 import NumberFinder from './NumberFinder';
 import DraggableMenuDemo from './DraggableMenuDemo';
 import FlagSelect from './FlagSelect';
+import DraggableModal from './DraggableModal';
 
 
 const theme = createMuiTheme({
@@ -48,7 +49,7 @@ class Demo extends Component {
                 {this.props.type == 'qrCode' && <QrCode/>}
                 {this.props.type == 'numberFinder' && <NumberFinder/>}
                 {this.props.type == 'draggableMenu' && <DraggableMenuDemo/>}
-                {this.props.type == 'resizableModal' && <QrCode/>}
+                {this.props.type == 'resizableModal' && <DraggableModal/>}
                 {this.props.type == 'flagSelect' && <FlagSelect/>}
             </MuiThemeProvider>
         )

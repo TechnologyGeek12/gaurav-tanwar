@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import { QRGenerator } from 'dynamic-qr-code-generator';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import TextField from '@material-ui/core/TextField';
-import DraggableMenu from 'react-draggable-menu';
-import RegionSelect from 'react-region-flag-select';
+import RegionSelect from './reactFlag/lib/index';
 
 class FlagSelect extends Component {
     constructor(props) {
@@ -14,7 +12,7 @@ class FlagSelect extends Component {
                 isFlag: true,
                 isPhoneCode: true,
                 customCountryCode: [],
-                countryCode: '',
+                // countryCode: '',
                 stateOnly: false,
                 countryOnly: false,
                 cityOnly: false,
@@ -30,6 +28,8 @@ class FlagSelect extends Component {
             },
             changeData: '',
             openData: '',
+            data: '',
+            key: 0
         }
     }
 
@@ -40,39 +40,37 @@ class FlagSelect extends Component {
     }
     handleChangeField = (e, name) => {
         let checkboxStates = this.state.checkboxStates;
-        let test=e.target.value.replace(/["']/g, "");
-        if(name==='customCountryCode')
-        {
-            test=e.target.value.replace(/["']/g, "");
-            test=test.replace(/[\[\]']+/g,'');
-            test=test.split(',');
+        let test = e.target.value.replace(/["']/g, "");
+        if (name === 'customCountryCode') {
+            test = e.target.value.replace(/["']/g, "");
+            test = test.replace(/[\[\]']+/g, '');
+            test = test.split(',');
         }
         checkboxStates[name] = test;
-        this.setState({ checkboxStates: checkboxStates });
+        this.setState({ checkboxStates: checkboxStates, key: this.state.key + 1 });
     }
 
-    handleChange = (data) => {
-        console.log('change data', data);
-        //do something here with data
-        this.setState({ changeData: data });
-    }
-    isOpen = (value) => {
-        console.log('open data', value);
-        //do something here with value
-        this.setState({ openData: value });
+    SetField = () => {
+        if (this.state.checkboxStates.selectedCountryCode) {
+            let checkboxStates = this.state.checkboxStates;
+            checkboxStates['customCountryOnly'] = true;
+            this.setState({ checkboxStates: checkboxStates });
+        }
+        else {
+            let checkboxStates = this.state.checkboxStates;
+            checkboxStates['customCountryOnly'] = false;
+            this.setState({ checkboxStates: checkboxStates });
+        }
     }
 
-    SetField=()=>{
-        let checkboxStates = this.state.checkboxStates;
-        checkboxStates['customCountryOnly'] = true;
-        this.setState({ checkboxStates: checkboxStates });
+    handleChangeMethod = (data) => {
+        this.setState({ data: data });
     }
 
 
     render() {
         let keysData = Object.keys(this.state.checkboxStates);
         let that = this;
-        console.log('inside render', this.state.checkboxStates);
         return (
             <div style={{ width: '100%' }}>
                 <div style={{ color: '#e64a19', textAlign: 'center', fontSize: 36 }}>
@@ -96,7 +94,10 @@ class FlagSelect extends Component {
                             isSearchCity={that.state.checkboxStates.isSearchCity}
                             isSearchCountry={that.state.checkboxStates.isSearchCountry}
                             isSearchState={that.state.checkboxStates.isSearchState}
-                            isSearch={that.state.checkboxStates.isSearch} />
+                            isSearch={that.state.checkboxStates.isSearch}
+                            handleChange={this.handleChangeMethod}
+                            key={this.state.key}
+                        />
                     </div>
                     <div style={{ width: '15%', float: 'left' }}>
                         {keysData.map(function (data, index) {
@@ -134,18 +135,37 @@ class FlagSelect extends Component {
                     </div>
 
                     <div style={{ width: '30%', float: 'left', paddingTop: 20, color: '#e64a19' }}>
-                        Output(QR-code you get from button onClick method in {`<div id="qr-container"></div>`}:
+                        Output(Values you get from method response:
                             <div style={{ paddingTop: 20 }}>
                             <pre>
                                 handleChange Method data:-
                                     <br />
-                                id: <span style={{ color: '#e64a19' }}>{this.state.changeData && this.state.changeData.id}</span>
-                                <br />
-                                name: <span style={{ color: '#e64a19' }}>{this.state.changeData && this.state.changeData.name}</span>
-                                <br />
-                                isOpen Method data:-
-                                <span style={{ color: '#e64a19' }}>{this.state.openData && this.state.openData}</span>
-                                <br />
+                                Result:<br />
+                                <span style={{ color: '#e64a19' }}>
+                                    &#123;<br />
+                                    countryData: <span style={{ color: '#e64a19' }}>
+                                        data: &#123;<br />
+                                        {this.state.data && this.state.data.countryData && `id: ${this.state.data.countryData.data.id},sortname:${this.state.data.countryData.data.sortname},name:${this.state.data.countryData.data.name},phoneCode:${this.state.data.countryData.data.phoneCode}`}
+                                        <br />
+                                        &#125;
+                                </span>
+                                    <br />
+                                    stateData: <span style={{ color: '#e64a19' }}>
+                                        data: &#123;<br />
+                                        {this.state.data && this.state.data.stateData && this.state.data.stateData.data && this.state.data.stateData.data.id && `id: ${this.state.data.stateData.data.id},name:${this.state.data.stateData.data.name},country_id:${this.state.data.stateData.data.country_id}`}
+                                        <br />
+                                        &#125;
+                                </span>
+                                    <br />
+                                    cityData: <span style={{ color: '#e64a19' }}>
+                                        data: &#123;<br />
+                                        {this.state.data && this.state.data.cityData && this.state.data.cityData.data && this.state.data.cityData.data.id && `id: ${this.state.data.cityData.data.id},name:${this.state.data.cityData.data.name},state_id:${this.state.data.cityData.data.state_id}`}
+                                        <br />
+                                        &#125;
+                                </span>
+                                    <br />
+                                    &#125;
+                                </span>
                             </pre>
                         </div>
                     </div>

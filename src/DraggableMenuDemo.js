@@ -26,19 +26,20 @@ class DraggableMenuDemo extends Component {
                 // menuList: [["fab fa-affiliatetheme", '#fff', "#FBBD3B", 2,'item 1'], ["fas fa-ad", '#fff', "#4185F4", 3,'item 2'], ["fas fa-adjust", '#fff', "#48A853", 4,'item 3'], ["fab fa-adn", '#fff', "#EA4335", 5,'item 4']]
             },
             changeData: '',
-            openData: ''
+            openData: '',
+            key:0
         }
     }
 
     updateStateData = (name) => {
         let checkboxStates = this.state.checkboxStates;
         checkboxStates[name] = !this.state.checkboxStates[name];
-        this.setState({ checkboxStates: checkboxStates });
+        this.setState({ checkboxStates: checkboxStates,key:this.state.key+1 });
     }
     handleChangeField = (e, name) => {
         let checkboxStates = this.state.checkboxStates;
         checkboxStates[name] = e.target.value;
-        this.setState({ checkboxStates: checkboxStates });
+        this.setState({ checkboxStates: checkboxStates,key:this.state.key+1 });
     }
 
     handleChange = (data) => {
@@ -54,7 +55,6 @@ class DraggableMenuDemo extends Component {
     render() {
         let keysData = Object.keys(this.state.checkboxStates);
         let that = this;
-        console.log('inside render', this.state.checkboxStates);
         return (
             <div style={{ width: '100%' }}>
                 <div style={{ color: '#e64a19', textAlign: 'center', fontSize: 36 }}>
@@ -87,7 +87,6 @@ class DraggableMenuDemo extends Component {
                                             label={data}
                                             value={Array.isArray(that.state.checkboxStates[data]) ? ('[' + that.state.checkboxStates[data] + ']') : that.state.checkboxStates[data]}
                                             onChange={(e) => that.handleChangeField(e, data)}
-                                            onBlur={() => that.generateQr()}
                                             margin="normal"
                                         />
                                     </div>
@@ -111,6 +110,7 @@ class DraggableMenuDemo extends Component {
                             closeOnSelection={this.state.checkboxStates.closeOnSelection}
                             showMenuOpenForTime={parseInt(this.state.checkboxStates.showMenuOpenForTime)}
                             border={this.state.checkboxStates.border}
+                            key={this.state.key}
                         />
                     </div>
 
