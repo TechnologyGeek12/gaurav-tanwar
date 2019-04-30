@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "73e412fa2e5bde30eba0852e617afd98",
+    "revision": "eb0d5d902e5d6223d796bd53fc9bde51",
     "url": "/gaurav-tanwar/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gaurav-tanwar/static/css/2.b67f52f5.chunk.css"
   },
   {
-    "revision": "2dd6a95c411b5ba62087",
+    "revision": "72a5c7dd354c86c4c09b",
     "url": "/gaurav-tanwar/static/css/main.51bac027.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gaurav-tanwar/static/js/2.6baf6c45.chunk.js"
   },
   {
-    "revision": "2dd6a95c411b5ba62087",
-    "url": "/gaurav-tanwar/static/js/main.b6df3d2f.chunk.js"
+    "revision": "72a5c7dd354c86c4c09b",
+    "url": "/gaurav-tanwar/static/js/main.53fbf760.chunk.js"
   },
   {
     "revision": "88a8e4f842177076d9e1",
