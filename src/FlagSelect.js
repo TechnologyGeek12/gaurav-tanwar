@@ -76,6 +76,7 @@ class FlagSelect extends Component {
                 <div style={{ color: '#e64a19', textAlign: 'center', fontSize: 36 }}>
                     <b> React Region Flag Select</b>
                 </div>
+                Click <a href='https://www.npmjs.com/package/react-region-flag-select'> here </a> for NPM
                 <div>
                     <div style={{ width: '40%', float: 'left' }}>
                         <RegionSelect

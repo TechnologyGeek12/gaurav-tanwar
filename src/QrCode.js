@@ -51,6 +51,7 @@ class QrCode extends Component {
                 <div style={{ color: '#e64a19', textAlign: 'center', fontSize: 36 }}>
                     <b> Dynamic QR-code Generator</b>
                 </div>
+                Click <a href='https://www.npmjs.com/package/dynamic-qr-code-generator'> here </a> for NPM
                     <div>
                         <div style={{ width: '35%', float: 'left' }}>
                             {keysData.map(function (data, index) {

@@ -60,6 +60,7 @@ class DraggableMenuDemo extends Component {
                 <div style={{ color: '#e64a19', textAlign: 'center', fontSize: 36 }}>
                     <b> React Draggable Menu</b>
                 </div>
+                Click <a href='https://www.npmjs.com/package/react-draggable-menu'> here </a> for NPM
                 <div>
                     <div style={{ width: '20%', float: 'left' }}>
                         {keysData.map(function (data, index) {

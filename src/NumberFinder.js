@@ -28,6 +28,7 @@ class QrCode extends Component {
                 <div style={{ color: '#e64a19', textAlign: 'center', fontSize: 36 }}>
                     <b> Number Finder</b>
                 </div>
+                Click <a href='https://www.npmjs.com/package/number-finder'> here </a> for NPM
                     <div>
                         <div style={{ width: '50%', float: 'left', marginRight: 50 }}>
                             {keysData.map(function (data, index) {

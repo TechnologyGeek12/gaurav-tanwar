@@ -62,6 +62,7 @@ class DraggableModal extends Component {
                 <div style={{ color: '#e64a19', textAlign: 'center', fontSize: 36 }}>
                     <b> React Draggable Resizable Modal</b>
                 </div>
+                   Click <a href='https://www.npmjs.com/package/react-draggable-resizable-modal'> here </a> for NPM
                 <div>
                     <div style={{ float: 'left' }}>
                         <ReactDynamicModal initWidth={500} initHeight={400} onRequestClose={this.closeModal} isOpen={this.state.isOpen}
